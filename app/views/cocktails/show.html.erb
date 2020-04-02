@@ -12,6 +12,14 @@
         <%= dose.ingredient.name %>
        <% end %>
 
+    <div class="pt-4" >
+      <%= link_to "Delete dose", dose_path(@cocktail), method: :delete, class: "btn btn-danger" %>
+    </div>
+
+    <div class= "pt-4">
+      <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+    </div>
+
   </div>
 
   <div>
