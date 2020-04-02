@@ -1,0 +1,19 @@
+<div class="container pt-4" >
+  <div>
+    <p>
+      <h2>
+      <strong>Name:</strong>
+      <%= @cocktail.name %>
+      </h2>
+    </p>
+
+      <% @cocktail.doses.each do |dose|  %>
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+       <% end %>
+
+  </div>
+
+  <div>
+  <%= link_to 'Back to all Cocktail', cocktails_path %>
+  </div>
